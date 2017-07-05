@@ -1,0 +1,45 @@
+
+<% include ../Public/head.ejs %>
+<% include ../Public/header.ejs %>
+<% include ../Public/sidebar.ejs %>
+<block name="content">
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">信息列表</strong> / <small>list</small></div>
+  </div>
+       
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-check"><input type="checkbox"></th><th class="table-id">ID</th><th class="table-title">name</th>
+                <th class="table-type">name</th>
+                <th class="table-author am-hide-sm-only">图片</th>
+
+                <th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          <% for(var i = 0; i<datapack.length;i++){ %>
+          <form method="post" action="/admin/Movies/list/delete">
+            <tr>
+              <td><input type="checkbox"><input type="text" name="id" value="<%=datapack[i].vid%>" style="display:none;"> </td>
+              <td><%= datapack[i].vid%></td>
+              <td><%= datapack[i].name%></td>
+              <td><%= datapack[i].name%></td>
+              <td class="am-hide-sm-only"><img src="<%=datapack[i].tumb_src%> "style= "height:60px;"></td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+                    <a href="/admin/Movies/movieEdit?vid=<%= datapack[i].vid %>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> edit</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            </form>
+          <%};%>
+          </tbody>
+        </table>
+  </div>
+</div>
+          <hr>
+<% include ../Public/footer.ejs %>

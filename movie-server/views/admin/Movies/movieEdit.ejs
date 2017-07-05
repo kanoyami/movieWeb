@@ -1,0 +1,55 @@
+<% include ../Public/head.ejs %>
+<% include ../Public/header.ejs %>
+<% include ../Public/sidebar.ejs %>
+
+<block name="content">
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">movies</strong> / <small>Edit</small></div>
+</div>
+<form class="am-form" method="post" enctype="multipart/form-data">
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+             name
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input value="<%= datapack.name%>" type="text" class="am-input-sm" name="name">
+            </div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+             描述
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input  value="<%= datapack.tinycontent%>"  type="text" class="am-input-sm" name="tinycontent">
+            </div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              图片
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="file" class="am-input-sm" name="tumb_src" accept="image/jpeg,image/png,image/gif">
+            </div>
+            <div class="am-hide-sm-only am-u-md-6"></div>
+          </div>
+            <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              movie source
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="file" class="am-input-sm" name="src" accept="audio/mp4, video/mp4">
+            </div>
+            <div class="am-hide-sm-only am-u-md-6"></div>
+          </div>
+
+          <input  type="text" name="vid"  value="<%= datapack.vid%>" style="display:none"  >
+
+        
+<div class="am-margin">
+    <button type="submit" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+</div>
+</form>
+<% include ../Public/footer.ejs %>

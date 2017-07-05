@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Bootstrap Landing Page </title>
+    <!-- BOOTSTRAP CORE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- CUSTOM CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+    
+    <div class="navbar navbar-default navbar-fixed-top scroll-me" >  
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " style="padding:20px;">
+                    <li><a href="#home-sec">HOME</a></li>
+                     <li><a href="#about-sec">ABOUT</a></li>
+                     <li><a href="#description-sec">TEXT</a></li>
+                    <li><a href="#contact-sec">CONTACT</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+     <!-- NAVBAR END  -->
+   
+        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+       <div id="home-sec">
+        <div class="overlay">
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2 text-center scroll-me" >
+
+                    <h1 style="padding-top:120px;">
+                        <strong>We are  <mark>Landing </mark>this page here only for you </strong>
+                    </h1>
+                    <p class="home-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Mauris sagittis felis dolor vitae. Mauris sagittis felis dolor vitae. 
+                Mauris sagittis felis dolor vitae Mauris sagittis felis dolor vitae.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <br />
+                    <a href="#about-sec" class="btn btn-info btn-lg"  > EXPLORE TEMPLATE </a>
+                </div>
+                 
+            </div>
+        </div>
+
+    </div>
+     <!--HOME SECTION END  -->
+       <section id="about-sec" >
+          <div class="container">
+           
+            <div class="row text-center">
+<% for (var i = datapack.length - 1; i >= 0; i--) { %>
+    
+
+<div class="col-md-4">
+     <img src="<%=datapack[i].img_src%>" alt="" class="img-circle" />
+                    <br />
+    <h3><%= datapack[i].professor_name%> </h3>
+    <p>
+        <%= datapack[i].descriptions%>
+    </p>
+
+</div>
+
+<%}; %>
+<!-- <div class="col-md-4">
+    <img src="assets/img/22.jpg" alt="" class="img-circle" />
+                    <br />
+    <h3>Rosy Jinaxa Lei </h3>
+                    
+                     <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius.
+    </p>
+</div>
+<div class="col-md-4">
+                    <img src="assets/img/33.jpg" alt="" class="img-circle" />
+                    <br />
+    <h3>Domainai Loudan Si</h3>
+                     <p>
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius.
+    </p>
+</div> -->
+            </div>
+        </div>
+        <!-- CONTAINER END  -->
+    </section>
+    <!--ABOUT SECTION END  -->
+           <section id="description-sec">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                     <h3>Small Description </h3>
+    <p >
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius. 
+        Nunc at viverra risus. 
+        In euismod quam ac dictum varius.
+        In euismod quam ac dictum varius.
+        Nunc at viverra risus. 
+       
+    </p>
+                </div>
+
+            </div>
+            <!-- ROW END  -->
+        </div>
+        <!-- CONTAINER END  -->
+    </section>
+    <!--DESCRIPTION SECTION END  -->
+    <section id="contact-sec">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                     <h3>Contact Team </h3>
+                    <br />
+        <div class="form-group">
+                            <strong>Address:</strong>  340, New Lane , Newyork Way, United States. 
+                            <br /><br />
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Enter Your Name" />
+                            <label></label>
+                        <input type="text" class="form-control" placeholder="Enter Your Email" />
+                            <label></label>
+                           <textarea class="form-control" placeholder="Enter Your Query" rows="5"></textarea>
+                           <br />
+                            <a href="#" class="btn btn-primary">SEND QUERY</a>
+                            </div>
+                    <div class="footer">
+                        &copy; 2015 your domain | More Templates - Collect from 
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <!--CONTACT SECTION END  -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+   <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- SCROLLING SCRIPTS PLUGIN  -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+      <!-- CUSTOM SCRIPTS   -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
